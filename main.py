@@ -23,7 +23,7 @@ def remap_to_ROTN(n: int, exit_key: str) -> None:
     keyboard.wait(exit_key)
 
 def main():
-    remap_to_ROTN(1 if len(sys.argv) < 2 else sys.argv[1], "shift+esc" if len(sys.argv) < 3 else sys.argv[2]) # if no args 1 is default else the second arg is taken and exit key is third arg
+    remap_to_ROTN(1 if len(sys.argv) < 2 else int(sys.argv[1]), "shift+esc" if len(sys.argv) < 3 else sys.argv[2]) # if no args 1 is default else the second arg is taken and exit key is third arg
 
 if __name__ == "__main__":
     main()
